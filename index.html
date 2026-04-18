@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=upload"
+    />
+  </head>
+  <body>
+    <h1 class="Title">Image to Text</h1>
+    <div class="upload">
+      <span class="header">
+        <h2>Upload Image</h2>
+        <p>Choose an image to extract text from</p>
+      </span>
+      <div class="upload-box">
+        <div class="content">
+          <input type="file" accept="*/image" id="file" />
+          <span class="material-symbols">upload</span>
+          <p>Click to upload an image</p>
+        </div>
+        <img id="preview" />
+      </div>
+      <span class="Format_Selector">
+        <h2>Output Format</h2>
+        <select id="format">
+          <option value="eng">English</option>
+          <option value="mar">Marathi</option>
+          <option value="jpn">Japanese</option>
+          <option value="spa">Spanish</option>
+          <option value="fra">French</option>
+          <option value="deu">German</option>
+          <option value="ita">Italian</option>
+          <option value="hin">Hindi</option>
+        </select>
+        <div class="buttons">
+          <button class="Extract">Extract Text</button>
+        </div>
+        <div class="progress-box">
+          <h2 id="status">Waiting....</h2>
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="txtContainer">
+      <div class="upload">
+        <span class="header">
+          <h2>Extracted Text</h2>
+        </span>
+        <div class="confidence"></div>
+        <div class="output">
+          <p id="extractedTxt"></p>
+        </div>
+        <div class="buttons">
+          <button class="copy">
+            <span class="material-symbols-outlined"> content_copy </span> copy
+          </button>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/6.0.1/tesseract.min.js"
+      integrity="sha512-x3WuOingc6Q+P7pb4dV+MFLvfjIzTzk+e/HZwSdeIZ5VT5PEA67LMn60Tp3G7cj4pYVbdsPF0zjFqafDt/gOnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
