@@ -1,0 +1,1 @@
+# Text-Extractor-From-Image-Project
